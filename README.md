@@ -56,6 +56,8 @@ pip install requests
 ## 技術架構
 
 - **前端：** 純 HTML / CSS / JavaScript + [Chart.js](https://www.chartjs.org/)
-- **資料來源：** Yahoo Finance API
-- **代理伺服器：** Python `http.server`（解決 CORS）
-- **部署：** Vercel
+- **資料來源：**
+  - [TWSE](https://www.twse.com.tw)（臺灣證券交易所）— 上市股票日K資料
+  - [TPEx](https://www.tpex.org.tw)（證券櫃檯買賣中心）— 上櫃股票日K資料
+  - [FinMind](https://finmindtrade.com)（FinMind API）— 財務報表、法人買賣超
+- **部署：** Vercel（純靜態，三個資料來源均原生支援 CORS，不需要 proxy）
