@@ -53,6 +53,23 @@ pip install requests
 
 > 按 `Ctrl+C` 可停止代理伺服器。
 
+## 相關專案對照
+
+本人另有一個 Streamlit 版本的股票分析工具 [stock-chart-analysis](https://github.com/caryhp2-cell/stock-chart-analysis)，兩者架構不同：
+
+| | **tw-stock-analyzer（本專案）** | **stock-chart-analysis** |
+|--|--|--|
+| 框架 | 純 HTML + JS | Streamlit（Python）|
+| 運作位置 | 瀏覽器端（Client-side） | 伺服器端（Server-side） |
+| 資料來源 | TWSE / TPEx / FinMind | Yahoo Finance（yfinance）|
+| 需要 Python server | 否 | 是 |
+| 部署方式 | Vercel（靜態 CDN） | 本機執行 |
+| 類比 | SPA（純前端） | SSR（Next.js Server-side） |
+
+> 兩者都是「一個 URL 進去全搞定」，但運作原理不同。本專案因為不需要 server，所以能直接部署到 Vercel CDN；stock-chart-analysis 需要 Python server 持續運行，無法部署到 Vercel。
+
+---
+
 ## 技術架構
 
 - **前端：** 純 HTML / CSS / JavaScript + [Chart.js](https://www.chartjs.org/)
